@@ -22,6 +22,22 @@ docker-compose up -d
 docker ps
 ```
 
+4. Para acessar a interface do Kibana 
+```
+http://<localhost>:4601
+```
+Username: elastic  
+Password: password  
+
+5. Na interface, para acessar os índices do ElasticSearch: 
+    - Clique na barra lateral -> Management -> Dev Tools use a query ```GET _cat/indices?v```, os índices que não começam com '.' são indexados pelo Logstash no ElasticSearch
+6. Na interface, para obter uma visualização com Kibana:  
+    - Clique na barra lateral -> Analytics -> Discover
+    - No canto superior esquerdo clique em "Filebeat" (a data view selecionada por padrão) e mude para "Air Data View"
+    - Realize uma query como "message : *New York* and message: *Summer*" para obter um histograma com a quantidade de registros que possuem essas duas palavras chaves no índice
+    - No canto superior direito é possível filtrar por data entre outros atributos  
+    \*[Link]() para um vídeo produzido por mim com a demonstração desse passo a passo
+
 7. Para encerrar a execução dos containers  
 ```
 docker-compose down
@@ -59,7 +75,9 @@ Variável ```KIBANA_PORT``` em ```.env``` sendo referenciada no ```docker-compos
 Configuração ```- esdata01:/usr/share/elasticsearch/data``` no serviço ```es01``` no ```docker-compose.yml```  
 
 ## **O que poderia ter sido melhorado/realizado com mais tempo**  
-- Falar do Filebeat/Metricbeat
+- Poderia ser realizada uma aplicação com Shell Script para obter logs do sistema e enviá-los para processamento e indexação no Logstash  
+- Poderia ter sido  integrado o Filebeat para coletar logs em tempo real de alguma aplicação e enviá-los diretamente ao Logstash ou Elasticsearch  
+- Metricbeat poderia ser configurado para coletar métricas do sistema (como uso de CPU, memória e rede) e enviá-las ao Elasticsearch  
 
 ## **Principais dificuldades**  
 **1. Tentativa de desenvolver o projeto em ambiente Windows 11**
@@ -78,12 +96,5 @@ kernelCommandLine = "sysctl.vm.max_map_count=262144"
 
 
 ## **Principais aprendizados**
-- Falar sobre a intervenção do WSL no VirtualBox  
 
-<!-- - Compreensão dos objetivos das ferramentas Prometheus e Grafana e como elas se comunicam entre si
-
-- Compreensão do uso da API do Prometheus para Python
- 
-- Compreensão dos dashboards no Grafana, utilizando queries com código ou no builder, configuração de unidades de medida, formatação de legenda e título para o usuário final  ([vídeo utilizado](https://youtu.be/EGgtJUjky8w?si=H2K8y3eOY5DZTysX)) -->
-
-
+- Compreensão dos objetivos das ferramentas Logstash e Kitana e como elas se comunicam com o ElasticSearch

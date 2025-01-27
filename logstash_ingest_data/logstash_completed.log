@@ -7,3 +7,5 @@
 /usr/share/logstash/ingest_data/log_for_status.log
 /usr/share/logstash/ingest_data/logstash_completed.log
 /usr/share/logstash/ingest_data/logstash_completed.log
+/usr/share/logstash/ingest_data/air.csv
+/usr/share/logstash/ingest_data/quality.csv
