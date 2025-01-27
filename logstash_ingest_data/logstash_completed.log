@@ -5,3 +5,5 @@
 /usr/share/logstash/ingest_data/logstash_completed.log
 /usr/share/logstash/ingest_data/new_test.log
 /usr/share/logstash/ingest_data/log_for_status.log
+/usr/share/logstash/ingest_data/logstash_completed.log
+/usr/share/logstash/ingest_data/logstash_completed.log

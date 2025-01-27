@@ -1,0 +1,3 @@
+filebeat_ingest_data
+filebeat.yml
+metricbeat.yml
