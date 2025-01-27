@@ -30,7 +30,7 @@ docker-compose down
 ## **Como foi desenvolvido o projeto**  
 **1. Busca por material de referência**
 - Apesar de conhecer o ElasticSearch/OpenSearch não havia configurado do zero
-- Encontrei um [tutorial](https://www.elastic.co/blog/getting-started-with-the-elastic-stack-and-docker-compos
+- Encontrei um [tutorial](https://www.elastic.co/blog/getting-started-with-the-elastic-stack-and-docker-compose
 ) publicado pela Elastic para subir os serviços da stack com docker compose e resolvi segui-lo, ignorando as etapas relacionadas ao Filebeat e Metricbeat  
 
 **2. Implementação do Docker Compose**  
