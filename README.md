@@ -94,9 +94,12 @@ kernelCommandLine = "sysctl.vm.max_map_count=262144"
 ```
 - Contudo, mesmo realizando essas alterações e reiniciando a máquina, o container do ElasticSearch continuava encerrando, então resolvi partir para o uso do Linux WSL como ambiente
 
+**2. Compreender o caminho para criação de um dashboard dentro das opções possíveis no Kitana**
+- Resolvi na tentativa e erro pois não encontrei vídeo com um cenário semelhante ao que eu precisava
+- Ao montar um dashboard comecei a explorar os recursos e filtros até compreender o que estava sendo exibido
 
 ## **Principais aprendizados**
 
-- Compreensão queries e indexação para ElasticSearch
+- Compreensão de queries e indexação para ElasticSearch
 - Compreensão de processamento de logs com Logstash
 - Configuração de dashboards de dados em tempo real com Kitana
