@@ -74,11 +74,6 @@ Variável ```KIBANA_PORT``` em ```.env``` sendo referenciada no ```docker-compos
 - O Elasticsearch deve persistir dados entre reinicializações  
 Configuração ```- esdata01:/usr/share/elasticsearch/data``` no serviço ```es01``` no ```docker-compose.yml```  
 
-## **O que poderia ter sido melhorado/realizado com mais tempo**  
-- Poderia ser realizada uma aplicação com Shell Script para obter logs do sistema e enviá-los para processamento e indexação no Logstash  
-- Poderia ter sido  integrado o Filebeat para coletar logs em tempo real de alguma aplicação e enviá-los diretamente ao Logstash ou Elasticsearch  
-- Metricbeat poderia ser configurado para coletar métricas do sistema (como uso de CPU, memória e rede) e enviá-las ao Elasticsearch  
-
 ## **Principais dificuldades**  
 **1. Tentativa de desenvolver o projeto em ambiente Windows 11**
 - O container do ElasticSearch encerrava devido um erro com a configuração de memória virtual
@@ -97,6 +92,11 @@ kernelCommandLine = "sysctl.vm.max_map_count=262144"
 **2. Compreender o caminho para criação de um dashboard dentro das opções possíveis no Kitana**
 - Resolvi na tentativa e erro pois não encontrei vídeo com um cenário semelhante ao que eu precisava
 - Ao montar um dashboard comecei a explorar os recursos e filtros até compreender o que estava sendo exibido
+
+## **O que poderia ter sido melhorado/realizado com mais tempo**  
+- Poderia ser realizada uma aplicação com Shell Script para obter logs do sistema e enviá-los para processamento e indexação no Logstash  
+- Poderia ter sido  integrado o Filebeat para coletar logs em tempo real de alguma aplicação e enviá-los diretamente ao Logstash ou Elasticsearch  
+- Metricbeat poderia ser configurado para coletar métricas do sistema (como uso de CPU, memória e rede) e enviá-las ao Elasticsearch  
 
 ## **Principais aprendizados**
 
