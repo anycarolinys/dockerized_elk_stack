@@ -36,7 +36,7 @@ Password: password
     - No canto superior esquerdo clique em "Filebeat" (a data view selecionada por padrão) e mude para "Air Data View"
     - Realize uma query como "message : *New York* and message: *Summer*" para obter um histograma com a quantidade de registros que possuem essas duas palavras chaves no índice
     - No canto superior direito é possível filtrar por data entre outros atributos  
-    **\*[Link](https://youtu.be/VZqmJKEcG-0) para um vídeo produzido por mim com a demonstração desse passo a passo**
+    **\*[Link](https://youtu.be/VZqmJKEcG-0) para um vídeo de minha autoria com a demonstração desse passo a passo**
 
 7. Para encerrar a execução dos containers  
 ```
